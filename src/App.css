@@ -1,38 +1,272 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+  padding: 0px 20px 0px 20px
+}
+
+.navbar a {
+  margin: 20px 1.5%;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar a:hover {
+  cursor: pointer;
+}
+
+.content {
+  min-height: 89.5vh;
+}
+
+.signup {
+  width: fit-content;
+  height: auto;
+  margin: auto;
+  padding-top: 17vh;
+}
+
+.signup-input {
+  display: flex;
+  background-color: #d5d4d3;
+  margin: 25px 0px;
+  padding: 8px;
+}
+
+.signup-input label {
+  background-color: black;
+  font-size: 12px;
+  color: white;
+  padding: 4px 0px;
+  width: 120px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.signup-input input {
+  background-color: #d5d4d3;
+  border: 0px;
+  outline: 0;
+  margin-left: 10px;
+  padding-left: 10px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.signup-btn {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: white;
+  margin: auto;
+  font-weight: 600;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+}
+
+.navbar a.active {
+  background-color: black;
+  color: white;
+  padding: 5px 12px;
+  line-height: 16px;
+  border-radius: 5px;
+}
+
+.navbar .icon {
+  display: none;
+  font-size: 20px;
+  font-family: 600;
+}
+
+.blog {
+  width: 100%;
+  height: 90vh;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.blog-content {
+  width: 70%;
+  height: fit-content;
+  margin: auto;
+}
+
+.blog-info {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.guide-blog {
+  display: flex;
+}
+
+.guide-blog-img {
+  width: 58%;
+}
+
+.blog-content a {
+  text-decoration: none;
+}
+
+.blog-head {
+  color: black;
+  font-size: 28px;
+}
+
+.blog-head-h {
+  color: black;
+}
+
+.blog-p {
+  font-size: 18px;
+  color: gray;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.community-blogs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.community-blogs a {
+  width: 28%;
+  margin: 2%;
+}
+
+.c-blogs-div {
+  width: 100%;
+}
+
+.c-blog {
+  width: 100%;
+  height: 250px;
+}
+
+.add-blogs {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-blogs input {
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.add-blogs textarea {
+  width: 100%;
+  height: 40vh;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.add-blogs input.select-img,
+.preview {
+  width: 20%;
+  margin: 10px auto;
+}
+
+.preview {
+  border-radius: 10px;
+}
+
+.userblog {
+  width: 80%;
+  margin: auto;
+}
+
+.userblog img {
+  margin: 20px 0px;
+  width: 30%;
+}
+
+@media screen and (max-width:900px) {
+  .signup-input {
+    width: 80%;
+  }
+
+  .signup {
+    padding-left: 10%;
+  }
+
+  .content {
+    height: fit-content;
+  }
+
+  .blog-head {
+    font-size: 40px;
+  }
+
+  .guide-blog {
+    flex-direction: column-reverse;
+  }
+
+  .community-blogs {
+    flex-direction: column;
+  }
+
+  .community-blogs a {
+    width: 90%;
+  }
+
+  .userblog img {
+    width: 95%;
+  }
+
+  .blog-content {
+    width: 85%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 850px) {
+  .navbar a {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar a.icon {
+    display: block;
+  }
+
+
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0px 40px;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .navbar.responsive {
+    float: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
   }
 }
